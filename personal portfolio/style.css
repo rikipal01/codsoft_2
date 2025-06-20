@@ -1,0 +1,288 @@
+:root {
+    --primary: #e84393;
+    --background: #fef8f9;
+    --accent: #f2c29b;
+    --dark: #333;
+    --light: #fff;
+    --text: #555;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5rem 9%;
+    margin: 3rem auto;
+    background: var(--light);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem var(--shadow);
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: var(--accent);
+    padding: 1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem var(--shadow);
+}
+
+header .navbar a {
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: #444;
+    font-weight: 500;
+}
+
+header .navbar a:hover {
+    color: var(--primary);
+}
+
+/* About Section */
+.about,
+.skills,
+.projects,
+.resume,
+.contact {
+    background-size: cover;
+    background-position: center;
+}
+
+.about {
+    background-color: #fbe4db;
+    background-image: url(about-bg.jpg);
+}
+
+.about h2{
+    font-size: 3rem;
+    max-width: 600px;
+    color: var(--text);
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto 2rem auto;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.about-content img {
+    width: 140px;
+    height: 180px;
+    border-radius: 8px;
+    border: 2px solid var(--dark);
+    object-fit: cover;
+}
+
+.about-content p {
+    font-size: 1.4rem;
+    max-width: 600px;
+    color: var(--text);
+}
+
+/* Skills Section */
+.skills {
+    background-color: #f9dbef;
+    background-image: url(skill-bg.jpg);
+    text-align: center;
+}
+
+.skills h3 {
+    font-size: 1.8rem;
+    color: var(--dark);
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills a {
+    color: #0077cc;
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills a:hover {
+    text-decoration: underline;
+}
+
+/* Projects */
+.projects {
+    background-color: #e2f2ec;
+    background-image: url(projects-bg.jpg);
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.project img {
+    width: 400px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #aaa;
+    box-shadow: 0 4px 10px var(--shadow);
+    margin-top: 1rem;
+}
+
+.project h3 {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-top: 1rem;
+}
+
+.project p {
+    font-size: 1.4rem;
+    color: var(--text);
+}
+
+/* Resume Section */
+.resume {
+    background-color: #d8eaf4;
+    background-image: url(projects-bg.jpg);
+    text-align: center;
+}
+
+.resume p,
+.resume a {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+.resume a {
+    color: #0055cc;
+}
+
+/* Contact */
+.contact {
+    background-color: #fef1e9;
+    background-image: url(contact-bg.jpg);
+    text-align: center;
+}
+
+.contact p {
+    font-size: 1.6rem;
+    margin: 1rem auto;
+    max-width: 600px;
+}
+
+/* Footer */
+footer {
+    background: var(--accent);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-top: 4rem;
+}
+
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem 4%;
+    }
+
+    section {
+        padding: 3rem 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+  }
+
+    header .navbar {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border-top: 1px solid #ccc;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    header .navbar a {
+        padding: 1rem 0;
+        color: #333;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
